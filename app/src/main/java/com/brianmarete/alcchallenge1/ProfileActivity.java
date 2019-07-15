@@ -1,6 +1,9 @@
 package com.brianmarete.alcchallenge1;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
@@ -20,6 +23,24 @@ public class ProfileActivity extends AppCompatActivity {
 
         initToolbar();
         setProfileImageBehavior();
+
+        TextView emailText = findViewById(R.id.email_text);
+        emailText.setOnClickListener(v -> {
+            Intent i = new Intent(Intent.ACTION_SENDTO);
+            i.setData(Uri.parse("mailto:"));
+            i.putExtra(Intent.EXTRA_EMAIL, "bmarete10@gmail.com");
+            if (i.resolveActivity(getPackageManager()) != null) {
+                startActivity(i);
+            }
+        });
+
+        TextView phoneText = findViewById(R.id.phone_text);
+        phoneText.setOnClickListener(v -> {
+            Intent i = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:+254701928677"));
+            if (i.resolveActivity(getPackageManager()) != null) {
+                startActivity(i);
+            }
+        });
     }
 
     private void initToolbar() {
