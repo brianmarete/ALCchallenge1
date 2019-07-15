@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ALC challenge 1</string>
+    <string name="about_alc">About Alc</string>
+    <string name="my_profile">About Me</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="phone_number">+254 701928677</string>
+    <string name="email">bmarete10@gmail.com</string>
+    <string name="profile_text">
+        A hard working and aspiring software developer.
+        I have a keen eye for user experience and user interface design,
+        a passion for mobile technology, a deep desire for learning new things.</string>
+    <string name="country">Kenya</string>
+    <string name="my_name">Brian Marete</string>
+    <string name="track">Track: Android</string>
+</resources>
